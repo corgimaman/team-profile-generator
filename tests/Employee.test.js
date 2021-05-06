@@ -1,10 +1,11 @@
 const Employee = require('../lib/Employee');
 
 describe("Employee", () => {
-    it("Employee class should be function and new Employee should be an object", () => {
-        const test = new Employee();
-
+    it("Employee class should be function", () => {
         expect(typeof(Employee)).toBe("function");
+    });
+    it("new Employee should be an object", () =>{
+        const test = new Employee();
         expect(typeof(test)).toBe("object");
     });
     describe("constructor", () => {
@@ -40,6 +41,6 @@ describe("Employee", () => {
             const testEmployee = new Employee();
 
             expect(testEmployee.getRole()).toBe("Employee");
-        })
+        });
     });
 })
