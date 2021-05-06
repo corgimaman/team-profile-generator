@@ -1,17 +1,19 @@
-const Employee = require('../lib/Employee');
 const Intern = require('../lib/Intern');
 
 describe("Intern", () => {
     it("how do i test that it inherits", () => {
         console.log("help me tom!!!")
     });
+
     it("Intern class should be a function", () => {
         expect(typeof(Intern)).toBe("function");
     });
+
     it("new Intern should be an object", () =>{
         const test = new Intern();
         expect(typeof(test)).toBe("object");
     });
+
     describe("constructor", () => {
         it("should have a name, id, email, and school", () => {
             const testIntern = new Intern("Bob", 25, "bob@job.com", "University of Guam");
@@ -45,12 +47,18 @@ describe("Intern", () => {
             const testIntern = new Intern("Bob", 25, "bob@job.com", "University of Guam");
 
             expect(testIntern.getSchool()).toBe("University of Guam");
-        })
+        });
 
-        it("getRole should return Employee", () => {
+        it("getRole should return Intern", () => {
             const testIntern = new Intern();
 
             expect(testIntern.getRole()).toBe("Intern");
         });
-    })
-})
+
+        it("getRole should not return Employee", () => {
+            const testIntern = new Intern();
+
+            expect(testIntern.getRole()).toEqual(expect.not.stringMatching("Employee"));
+        });
+    });
+});
