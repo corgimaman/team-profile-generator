@@ -2,14 +2,23 @@ const inquirer = require('inquirer');
 const emailValid = require("email-validator");
 const fs = require('fs');
 const Employee = require('./lib/Employee');
+const Manager = require('./lib/Manager');
+const Engineer = require('./lib/Engineer');
+const Intern = require('./lib/Intern');
 
 function emailCheck(input){
     if (emailValid.validate(input)){
-        return true
+        return true;
     }
-
-    return 'Please enter a valid e-mail address.'
+    return 'Please enter a valid e-mail address.';
 };
+
+function numberCheck(input){
+    if (!isNaN(input)){
+        return true;
+    }
+    return 'Please enter a valid number.'
+}
 
 inquirer
   .prompt([
@@ -22,12 +31,13 @@ inquirer
       type: 'input',
       name: 'id',
       message: 'What is your ID?',
+      validate: numberCheck,
     },
     {
       type: 'input',
       name: 'email',
       message: 'What is your e-mail address?',
-      validate: emailCheck
+      validate: emailCheck,
     },
     {
       type: 'list',
@@ -40,6 +50,7 @@ inquirer
         type: 'input',
         name: 'officeNumber',
         message: 'What is your office number?',
+        validate: numberCheck,
         when: function(answers) {
             return answers.title === 'Manager';
         }
@@ -68,3 +79,18 @@ inquirer
     //   err ? console.log(err) : console.log('Successfully created test.html!')
     // );
   });
+
+  function createEmployee(answers){
+      let newEmployee;
+      if (answers.title === 'Manager'){
+        newEmployee = new Manager(answers.name, answers.id, answers.email, answers.officeNumber);
+      } else if(answers.title === 'Engineer'){
+        newEmployee = new Engineer(answers.name, answers.id, answers.email, answers.github);
+      } else if(answers.title === 'Intern') {
+        newEmployee = new Intern(answers.name, answers.id, answers.school);
+      } else {
+        newEmployee = new Employee(answers.name, answers.id, answers.email);
+      }
+
+      return newEmployee;
+  }
