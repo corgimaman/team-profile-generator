@@ -87,7 +87,7 @@ inquirer
       } else if(answers.title === 'Engineer'){
         newEmployee = new Engineer(answers.name, answers.id, answers.email, answers.github);
       } else if(answers.title === 'Intern') {
-        newEmployee = new Intern(answers.name, answers.id, answers.school);
+        newEmployee = new Intern(answers.name, answers.id, answers.email, answers.school);
       } else {
         newEmployee = new Employee(answers.name, answers.id, answers.email);
       }
