@@ -2,6 +2,13 @@ const Employee = require('../lib/Employee');
 
 describe("Employee", () => {
     describe("constructor", () => {
+        it("Employee class should be function and new Employee should be an object", () => {
+            const test = new Employee();
+
+            expect(typeof(Employee)).toBe("function");
+            expect(typeof(test)).toBe("object");
+        });
+
         it("should have a name, id, and email", () => {
             const testEmployee = new Employee("Bob", 25, "bob@job.com");
 
@@ -27,5 +34,11 @@ describe("Employee", () => {
 
             expect(testEmployee.getEmail()).toBe("bob@job.com");
         });
+
+        it("getRole should return Employee", () => {
+            const testEmployee = new Employee();
+
+            expect(testEmployee.getRole()).toBe("Employee");
+        })
     });
 })
