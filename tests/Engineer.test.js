@@ -1,9 +1,6 @@
 const Engineer = require('../lib/Engineer');
 
 describe("Engineer", () => {
-    it("how do i test that it inherits", () => {
-        console.log("help me tom!!!")
-    });
 
     it("Engineer class should be a function", () => {
         expect(typeof(Engineer)).toBe("function");

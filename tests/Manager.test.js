@@ -1,16 +1,16 @@
 const Manager = require('../lib/Manager');
 
 describe("Manager", () => {
-    it("how do i test that it inherits", () => {
-        console.log("help me tom!!!")
-    });
+
     it("Manager class should be a function", () => {
         expect(typeof(Manager)).toBe("function");
     });
+
     it("new Manager should be an object", () =>{
         const test = new Manager();
         expect(typeof(test)).toBe("object");
     });
+
     describe("constructor", () => {
         it("should have a name, id, email, and officeNumber", () => {
             const testManager = new Manager("Bob", 25, "bob@job.com", 101);
@@ -21,6 +21,7 @@ describe("Manager", () => {
             expect(testManager.officeNumber).toEqual(101);
         });
     });
+    
     describe("methods",() => {
         it("getName should return Bob", () => {
             const testManager = new Manager("Bob");
