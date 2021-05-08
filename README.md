@@ -11,7 +11,7 @@ A Node.js command-line program to create a webpage for your work team. The progr
 * [Testing](#Tests)
 
 ## Installation
-This requires Node.js to install and use. The package.json is already provided, so navigate to the project folder and run npm install.
+This requires Node.js to install and use. The package.json is already provided, so navigate to the project folder and run `npm install`.
 
 ## Usage
 Once you've installed the node modules needed, just run npm index.js and answer the questions. The webpage will generate based on your replies.
@@ -23,7 +23,7 @@ Once you've installed the node modules needed, just run npm index.js and answer 
 ![Screenshot](./assets/images/screenshot.png)
 
 ## Tests
-This program uses Jest to run tests on the objects and extended objects created. Use 'npm jest' to run the tests.
+This program uses Jest to run tests on the objects and extended objects created. Use `npm jest` to run the tests.
 
 ## License
 This project is licensed under the MIT license.
