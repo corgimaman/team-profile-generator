@@ -22,12 +22,13 @@ return `
     <link rel="icon" href="../assets/images/icon.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/806779c7fe.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Heading -->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 jumbotron mb-3">
+            <div class="col-12 jumbotron mb-3 py-3" style="background-color: #e6ffe6">
                 <h1 class="text-center"><i class="fas fa-users"></i> My Team</h1>
             </div>
         </div>
@@ -49,16 +50,16 @@ return `
 
 function makeManager (manager){
     cards.push( `
-    <div class="card">
-    <div class="card-header">
+    <div class="card mx-2">
+    <div class="card-header card-head">
         <h2 class="card-title">${manager.name}</h2>
         <h3 class="card-title"><i class="fas fa-mug-hot"></i> Manager</h5></h3>
     </div>
-    <div class="card-body">
+    <div class="card-body cardbody">
         <ul class="list-group">
-            <li class="list-group-item"><strong>ID: </strong>${manager.id}</li>
-            <li class="list-group-item"><strong>Email: </strong><a href="mailto:${manager.email}">${manager.email}</a></li>
-            <li class="list-group-item"><strong>Office Number: </strong>${manager.officeNumber}</li>
+            <li class="list-group-item list"><strong>ID: </strong>${manager.id}</li>
+            <li class="list-group-item list"><strong>Email: </strong><a href="mailto:${manager.email}">${manager.email}</a></li>
+            <li class="list-group-item list"><strong>Office Number: </strong>${manager.officeNumber}</li>
         </ul>
     </div>
 </div>
@@ -66,16 +67,16 @@ function makeManager (manager){
 }
 function makeEngineer (engineer){
     cards.push( `
-    <div class="card">
-    <div class="card-header">
+    <div class="card mx-2">
+    <div class="card-header card-head">
         <h2 class="card-title">${engineer.name}</h2>
         <h3 class="card-title"><i class="fas fa-cog"></i> Engineer</h5></h3>
     </div>
-    <div class="card-body">
+    <div class="card-body cardbody">
         <ul class="list-group">
-            <li class="list-group-item"><strong>ID: </strong>${engineer.id}</li>
-            <li class="list-group-item"><strong>Email: </strong><a href="mailto:${engineer.email}">${engineer.email}</a></li>
-            <li class="list-group-item"><strong>Github: </strong><a href="https://github.com/${engineer.github}">${engineer.github}</a></li>
+            <li class="list-group-item list"><strong>ID: </strong>${engineer.id}</li>
+            <li class="list-group-item list"><strong>Email: </strong><a href="mailto:${engineer.email}">${engineer.email}</a></li>
+            <li class="list-group-item list"><strong>Github: </strong><a href="https://github.com/${engineer.github}">${engineer.github}</a></li>
         </ul>
     </div>
 </div>
@@ -83,16 +84,16 @@ function makeEngineer (engineer){
 }
 function makeIntern (intern){
     cards.push( `
-    <div class="card">
-    <div class="card-header">
+    <div class="card mx-2">
+    <div class="card-header card-head">
         <h2 class="card-title">${intern.name}</h2>
         <h3 class="card-title"><i class="fas fa-graduation-cap"></i> Intern</h5></h3>
     </div>
-    <div class="card-body">
+    <div class="card-body cardbody">
         <ul class="list-group">
-            <li class="list-group-item"><strong>ID: </strong>${intern.id}</li>
-            <li class="list-group-item"><strong>Email: </strong><a href="mailto:${intern.email}">${intern.email}</a></li>
-            <li class="list-group-item"><strong>School: </strong>${intern.school}</a></li>
+            <li class="list-group-item list"><strong>ID: </strong>${intern.id}</li>
+            <li class="list-group-item list"><strong>Email: </strong><a href="mailto:${intern.email}">${intern.email}</a></li>
+            <li class="list-group-item list"><strong>School: </strong>${intern.school}</a></li>
         </ul>
     </div>
 </div>
