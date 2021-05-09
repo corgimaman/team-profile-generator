@@ -21,6 +21,8 @@ Once you've installed the node modules needed, just run npm index.js and answer 
 - Anytime you run the program, it will replace the HTML - so try to have all your team members and their information ready when you run the program.
 - The final deployed page looks similar to below:
 ![Screenshot](./assets/images/screenshot.png)
+- Here is a [link to the deployed webpage example](https://corgimaman.github.io/team-profile-generator/)
+- Here is a [link to a demonstration video](https://drive.google.com/file/d/1rBepfxky4rOVI3wyIpy80AXkm6WMytJD/view?usp=sharing)
 
 ## Tests
 This program uses Jest to run tests on the objects and extended objects created. Use `npm jest` to run the tests.
